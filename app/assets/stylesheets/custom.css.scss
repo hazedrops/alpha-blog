@@ -72,14 +72,33 @@ $navbar-default-bg: #E9AE4D;
   padding-bottom: 15px;
 }
 
+.article-center { /* For the show article page alignment */
+  float: none;
+  margin: auto 0;
+}
+
 .listing {
   list-style: none;
   padding-left: 0;
-  
 }
 
 .list-title {
   color: #E9AE4D;
+}
+
+.badge {
+  background-color: #E9AE4D;  
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+  font-weight: normal;
+}
+
+.badge a {
+  color: #75736f; 
+}
+
+.input_checkbox input {
+  width: auto !important;
 }
 
 footer {

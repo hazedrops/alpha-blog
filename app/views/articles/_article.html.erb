@@ -1,7 +1,7 @@
 <% obj.each do |article| %>
   <div class="row">
     <div class="col-xs-8 col-xs-offset-2">
-      <div class="well well-lg">
+      <div class="well well-lg" align="left">
         <div class="article-title">
           <%= link_to article.title, article_path(article), class: "list-title" %>
         </div>
@@ -14,6 +14,10 @@
             </small>
           </div>
         </div>
+        
+        <% if article.categories.any? %>
+          <p>Categories: <%= render article.categories %></p>
+        <% end %>
         
         <% if logged_in? && (current_user == article.user || current_user.admin?) %>
           <div class="article-actions">
@@ -29,3 +33,4 @@
     </div>
   </div>
 <% end %>
+
